@@ -33,6 +33,15 @@ function removeAllTask(){
     renderTasks();
 }
 
+function tooggleFilter() {
+    // Function to toggle filter
+}
+
+function completeTask(index) {
+    // Function to mark a task as complete
+    tasks[index].complated = true;
+}
+
 function renderTasks() {
     // Function to render tasks on the page
     const taskList = documebt.getElementById("todo-list");
@@ -43,7 +52,7 @@ function renderTasks() {
             <li class="todo-item flex justify-between item-center bg-white p-4 mb-2 rounded-lg shadow">
                     <span>${task.title}</span>
                      <div>
-                        <button class="px-[10px] py-[2px] rounded-[8px] bg-green-500 text-white">Edit</button>
+                        <button type="button" class="px-[10px] py-[2px] rounded-[8px] bg-green-500 text-white" onclick="completeTask(${index})">Complete</button>
                         <button class="px-[10px] py-[2px] rounded-[8px] bg-red-500 text-white">Delete</button>
                      </div>
                 </li>
